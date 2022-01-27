@@ -59,7 +59,7 @@ class CustomerControllerTest {
     }
 
     @Test
-    void testGetProjectAccount() {
+    void testGetCustomerRecord() {
         when(customerService.getCustomerPojo((Customer) any())).thenReturn(new CustomerPojo());
 
         ResponseEntity<CustomerPojo> result = customerController.getProjectAccount(1L);

@@ -77,7 +77,7 @@ public class CustomerController {
     @GetMapping("/{id:\\d+}")
     @Operation(summary = "Get a customer record", description = "Call this API to get a single customer record")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "retrieve a customer record"))
-    public ResponseEntity<CustomerPojo> getProjectAccount(@PathVariable("id") Long id) {
+    public ResponseEntity<CustomerPojo> getCustomerRecord(@PathVariable("id") Long id) {
         CustomerTempPojo customerTempPojo = new CustomerTempPojo();
         Optional<Customer> optionalCustomer  = customerRepository.findById(id);
         if (!optionalCustomer.isPresent()){
