@@ -62,7 +62,7 @@ class CustomerControllerTest {
     void testGetCustomerRecord() {
         when(customerService.getCustomerPojo((Customer) any())).thenReturn(new CustomerPojo());
 
-        ResponseEntity<CustomerPojo> result = customerController.getProjectAccount(1L);
+        ResponseEntity<CustomerPojo> result = customerController.getCustomerRecord(1L);
         Assertions.assertEquals(HttpStatus.NOT_FOUND, result.getStatusCode());
     }
 }
